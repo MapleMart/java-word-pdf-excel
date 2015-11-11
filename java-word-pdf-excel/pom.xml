@@ -19,6 +19,13 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+		<!-- Freemarker框架,用来导出word、pdf、excel开始 -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.23</version>
+		</dependency>
+		<!-- Freemarker框架,用来导出word、pdf、excel结束 -->
 	</dependencies>
 	<build>
 		<finalName>java-word-pdf-excel</finalName>
