@@ -21,7 +21,7 @@ public class WordFreemarker extends HttpServlet
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		dataMap.put("titleName", null);
+		dataMap.put("titleName", 1);//用来和word里的${titleName}里的名称要一样
 		dataMap.put("userName", 2);
 		dataMap.put("orgName", 3);
 		dataMap.put("deptName", 4);

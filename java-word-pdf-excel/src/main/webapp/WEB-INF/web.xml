@@ -1,20 +1,31 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app>
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
 	<display-name>Archetype Created Web Application</display-name>
 
+	<!-- word请求 -->
 	<servlet>
 		<servlet-name>word</servlet-name>
 		<servlet-class>
 			com.maplemart.word.action.WordFreemarker
 		</servlet-class>
 	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>word</servlet-name>
 		<url-pattern>word.do</url-pattern>
+	</servlet-mapping>
+	<!-- excel请求 -->
+	<servlet>
+		<servlet-name>excel</servlet-name>
+		<servlet-class>
+			com.maplemart.excel.action.ExcelFreemarker
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>excel</servlet-name>
+		<url-pattern>excel.do</url-pattern>
 	</servlet-mapping>
 
 </web-app>
