@@ -8,7 +8,7 @@
 	<servlet>
 		<servlet-name>word</servlet-name>
 		<servlet-class>
-			com.maplemart.action.WordFreemarker
+			com.maplemart.word.action.WordFreemarker
 		</servlet-class>
 	</servlet>
 

@@ -1,4 +1,4 @@
-package com.maplemart.action;
+package com.maplemart.word.action;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.maplemart.util.WordWebUtil;
+import com.maplemart.word.util.WordWebUtil;
 
 
 public class WordFreemarker extends HttpServlet

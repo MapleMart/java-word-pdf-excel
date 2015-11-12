@@ -1,4 +1,4 @@
-package com.maplemart.util;
+package com.maplemart.word.util;
 
 import java.io.BufferedWriter;
 import java.io.File;
