@@ -1,12 +1,7 @@
 package com.maplemart.util;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.io.OutputStreamWriter;
 import java.io.Writer;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
@@ -53,37 +48,18 @@ public class WordWebUtil
 	 * @author 黄永丰
 	 * @createtime 2015年11月11日
 	 * @param dataMap 需要填入模板的数据
-	 * @param fileName 导出文件名称
+	 * @param out 转出流
 	 */
-	public static File createDoc(Map<String, Object> dataMap,String fileName)
+	public static void createDoc(Map<String, Object> dataMap,Writer out)
 	{
 		try
 		{
-			File outFile = new File(fileName);
-			FileOutputStream fos = new FileOutputStream(outFile);
-			// 这个地方不能使用FileWriter因为需要指定编码类型否则生成的Word文档会因为有无法识别的编码而无法打开
-			OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
-			Writer out = new BufferedWriter(osw);
 			template.process(dataMap,out);
-			out.close();
-			fos.close();
-			return outFile;
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		return null;
 	}
 
-	/** 测试 */
-	public static void main(String[] args)
-	{
-		Map<String, Object> dataMap = new HashMap<String, Object>();
-		dataMap.put("titleName", 1);
-		dataMap.put("userName", 2);
-		dataMap.put("orgName", 3);
-		dataMap.put("deptName", 4);
-		WordWebUtil.createDoc(dataMap,"E:\\outFile.doc");
-	}
 }

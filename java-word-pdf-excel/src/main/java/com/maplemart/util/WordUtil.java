@@ -45,7 +45,7 @@ public class WordUtil
 			// 设置异常处理器
 			configure.setTemplateExceptionHandler(TemplateExceptionHandler.IGNORE_HANDLER);
 			// 定义Template对象,注意/config/templates包下的模板类型名字与fileName要一致
-			Template template = configure.getTemplate(fileName + ".xml");//wordTemplate.xml
+			Template template = configure.getTemplate(fileName + ".ftl");//wordTemplate.xml
 			// 输出文档路径及名称
 			File outFile = new File(savePath);
 			FileOutputStream fos = new FileOutputStream(outFile);
