@@ -39,7 +39,7 @@ public class WordUtil
 		try
 		{
 			// 加载模板文件(到工程里的包路径,不用到文件名)
-			configure.setClassForTemplateLoading(this.getClass(), "/config/templates");
+			configure.setClassForTemplateLoading(this.getClass(), "/templates/word");
 			// 设置对象包装器
 			configure.setObjectWrapper(new DefaultObjectWrapper());
 			// 设置异常处理器

@@ -25,16 +25,16 @@ public class WordWebUtil
 			configuration = new Configuration();
 			configuration.setDefaultEncoding("utf-8");
 			// 加载模板文件(到工程里的包路径,不用到文件名)
-			configuration.setClassForTemplateLoading(WordWebUtil.class, "/config/templates");
+			configuration.setClassForTemplateLoading(WordWebUtil.class, "/templates/word");
 			// 设置对象包装器
 			configuration.setObjectWrapper(new DefaultObjectWrapper());
 			// 设置异常处理器
 			configuration.setTemplateExceptionHandler(TemplateExceptionHandler.IGNORE_HANDLER);
 			// 定义Template对象,注意/config/templates包下的模板类型名字与fileName要一致
 			Properties pro = new Properties();
-			InputStream is = WordWebUtil.class.getResourceAsStream("/templates.properties");
+			InputStream is = WordWebUtil.class.getResourceAsStream("/templates/templates.properties");
 			pro.load(is);
-			template = configuration.getTemplate(pro.getProperty("fileName"));// wordTemplate.xml
+			template = configuration.getTemplate(pro.getProperty("word.template.fileName"));// wordTemplate.xml
 		}
 		catch (Exception e)
 		{
